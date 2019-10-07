@@ -1,0 +1,184 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\documentclass{beamer}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{lipsum}
+\apptocmd{\frame}{}{\justifying}{}
+
+\usepackage[super]{nth}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\hoffset}{-0.25in}
+
+\addtolength{\textwidth}{1.25in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+
+\raggedbottom
+%\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedleft\large\justifying
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-1pt}\raggedright\raggedleft}
+    \par
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth\raggedright}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/rajathj//}{\Large Rajath John Bosco}} & Email : \href{mailto:rajathj2@illinois.edu}{rajathj2@illinois.edu}\\
+  \href{https://www.linkedin.com/in/rajathj/}{https://www.linkedin.com/in/rajathj/} & Mobile : +1-217-819-9805 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Illinois at Urbana-Champaign}{Champaign, IL}
+      {Master of Science in Information Management (Data Science Track)  }{Aug. 2019 -- Expected May 2021}
+    \resumeSubheading
+      {Sri Jayachamarajendra College of Engineering}{Mysore, India}
+      {Bachelor of Engineering in Computer Science and Engineering;  GPA: 3.4 (8.5/10.0)}{Aug. 2012 -- July. 2016}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+ \resumeSubheading
+ {Gies College of Business , UIUC}{Champaign , IL}
+ {Course Assistant}{October 2019 - Present}
+\resumeItemListStart
+\resumeItem {iMBA}
+ {Manage \& provide feedback to a class of 200+ students enrolled under iMBA courses using Asana \& Zoom.}
+ \resumeItemListEnd
+ 
+ \resumeSubheading
+      {Visa Inc}{Bangalore, India}
+      {Systems Analyst, Product Reliability Engineering}{July 2016 - Aug 2019}
+      \resumeItemListStart
+      
+        \resumeItem {Visa AI Platform }{Developed scripts in Python and Shell to perform overall system health-check,check connectivity,  certificates and worked on CI/CD pipeline using Jenkins.
+        Increased productivity by 50\% by deploying Python scripts to oversee the purging of log files containing 3+ Million transactions in HDFS.} 
+        
+        \resumeItem{Verified By Visa }{Developed complex SQL queries to analyze 20+ million transactions to identify sales patterns, anomalies and used Python to generate reports to monitor performance in realtime. }
+        \resumeItem{Tokenization (Apple Pay, Android Pay etc.)} {Reduced 75\% of the overall time involved in the remediation of the servers by deploying python scripts to start and stop Mobile Wallet Gateway servers.}
+        \resumeItem{Payments Systems Risk}{Boosted efficiency by 25\% by developing a smoke test framework in Python and integrated with Cloudview to automate server remediations. 
+        }
+        \resumeItem{Splunk} {
+Queried machine-generated Big Data  to extract key metrics, devised alert mechanisms and visualised transaction data to  derive key insights to drive business efficiency
+        }
+        \resumeItem{Hackathon - Merchant Locator Chatbot (\nth{2} prize )}{Finished 2nd among 125 Teams by building a chatbot to call Visa's Merchant Locator API \& retrieve merchant data  to help people in distress find nearest available merchants.}
+        \resumeItem{Achievements}  {Received 19 "Go Beyond" - Corporate recognition for achieving crucial  milestones. Promoted from Associate System Analyst to Systems Analyst on Dec 2018.}
+        
+      \resumeItemListEnd
+
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+  \resumeSubItem{Tropical Storms}
+ {Applied spatial trigonometry, line-intersection algorithms to find possible loops in the storms and used PyGeodesy to calculate speed, distance, etc. and categorized Atlantic and Pacific hurricanes from US NHC Data.
+}
+
+ \resumeSubItem{High-Tech Sculptures}
+ {
+Computed the stability of huge marble blocks when projected upon a particular shape using Convex Hull based on center of gravity and density.  Demonstrated Test-Driven Development in Python and continuous integration with the help of Travis CI.}
+    \resumeSubItem{Product Analysis in Social Media}
+    {
+Achieved 82\% accuracy through sentiment analysis by using NLTK on product reviews obtained through Social Media using cron jobs and integrated it with a platform to visualize product specifications}
+    \resumeSubItem{Credit Card Fraud Detection}
+      {Achieved 86\% accuracy while classifying credit card frauds with the help of Sampling and logistic regression on an imbalanced Data-set.}
+
+      
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+   \resumeSubItem{Languages}
+   {             Python, Java, SQL, C++, R, HTML, CSS, Javascript} 
+      \resumeSubItem{Technologies}
+      {          Docker, Soap UI, Jenkins, Jira, Splunk, GIT, REST }
+     \resumeSubItem {Familiar}{Redis, TensorFlow, Hadoop, Hbase, Spark, Kafka, Hive, AWS, MongoDb}
+     \resumeSubItem{Relevant Coursework}{ Data Structures, Software Engineering, Design and Analysis of Algorithms, Computer Networks, Data and Statistical Modelling, Programming Analytics, Machine Learning (Coursera).
+ \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\section{Activities}
+ \resumeSubHeadingListStart
+   \resumeSubItem{Linux Campus Club SJCE}
+   {Conducted Sessions on Python , GIT , Machine Learning and worked on installing Ubuntu OS, Open Source Software on all the laboratory Systems.} 
+   \resumeSubItem{Student Council SJCE}
+   {Communicated and gave presentations to potential sponsors for the annual fest Jayciana, which helped in garnering funds of 15,000\$.}
+     
+     }
+ \resumeSubHeadingListEnd
+
+
+
+\end{document}
